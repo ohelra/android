@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_homepage);
 
         auth = FirebaseAuth.getInstance();
-        button = findViewById(R.id.logout);
-        textView = findViewById(R.id.user_details);
+        button = findViewById(R.id.btn_logout);
+        textView = findViewById(R.id.tv_username);
         user = auth.getCurrentUser();
         if(user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
